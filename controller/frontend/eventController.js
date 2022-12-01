@@ -8,7 +8,7 @@ exports.addEvent = async (req, res) => {
         const { name, date, type, price, info, } = req.body;
         let userId = req.user._id
         let newEvent = new Event({
-            name, image, date, type, price, info, userId
+            name, image, date, type, price, info, userId 
         });
         await newEvent.save();
         return res.status(200).json({
