@@ -77,7 +77,6 @@ exports.register = async (req, res) => {
             };
 
             const createdUser = await User.create(newUser);
-            console.log(createdUser, "createdUser")
             const user = await User.findOne({ email });
 
             const token = generateToken(user);

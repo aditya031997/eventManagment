@@ -12,7 +12,6 @@ const eventSchema = new Schema(
         },
         image: {
             type: String,
-            required: [true, "image is required"],
         },
         date: {
             type: String,
@@ -31,10 +30,6 @@ const eventSchema = new Schema(
             type: String,
             required: [true, "info is required"],
         },
-        created: {
-            type: Date,
-            default: Date.now,
-        }
     },
     {
         timestamps: true,

@@ -27,6 +27,8 @@ app.use((req, res, next) => {
     next();
   });
 
+  app.use("/tmp", express.static("tmp"));
+
 app.get('/', (req, res) => {
     res.send(`welcome to Events booking app `)
 })
